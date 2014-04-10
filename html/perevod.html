@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <title>Tech Wallet</title>
+    <link rel='stylesheet' href="../css/index.css" />
+    <link href="http://netdna.bootstrapcdn.com/twitter-bootstrap/2.3.0/css/bootstrap-combined.min.css" rel="stylesheet">
+    <script src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
+    <script src="../js/index.js"></script>
+</head>
+<body>
+<div class="container">
+    <div class='navbar navbar-inverse'>
+        <div class='navbar-inner nav-collapse' style="height: auto;">
+            <ul class="nav">
+                <li><a href="index.html">Счета</a></li>
+                <li><a href="status.html">История</a></li>
+                <li><a href="oplata.html">Оплата</a></li>
+                <li class="active"><a href="perevod.html">Перевод</a></li>
+                <li><a href="popolnenie.html">Пополнение</a></li>
+                <li><a href="spravka.html">?</a></li>
+            </ul>
+        </div>
+    </div>
+
+    <div id='content' class='row-fluid'>
+        <div class='span12 main thumbnail'>
+            <form class="form-horizontal">
+                <h2>Перевести</h2>
+                <div class="control-group">
+                    <label class="control-label">Со счёта:</label>
+                    <div class="controls">
+                        <select>
+                            <option>Web Money (R0010100101010010) 1000 Р</option>
+                            <option>Visa Electron (Зарплатная) (7623545235426354) 28 000 Р</option>
+                            <option>Visa Electron (Общак) (3745653645364556) 30 000 Р</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="control-group">
+                    <label class="control-label">На счёт:</label>
+                    <div class="controls">
+                        <select>
+                            <option>Web Money (R0010100101010010) 1000 Р</option>
+                            <option>Visa Electron (Зарплатная) (7623545235426354) 28 000 Р</option>
+                            <option>Visa Electron (Общак) (3745653645364556) 30 000 Р</option>
+                            <option>Другой (ввести)</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="control-group">
+                    <label class="control-label">№ счёта:</label>
+                    <div class="controls">
+                        <input type="text" value="R0010100101010010" />
+                    </div>
+                </div>
+                <div class="control-group">
+                    <label class="control-label">Сумму:</label>
+                    <div class="controls">
+                        <div class="input-append">
+                            <input type="text" value="1000">
+                            <span class="add-on">Р</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="control-group">
+                    <div class="controls">
+                        <button type="submit" class="btn btn-primary">Перевести</button>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+</body>
+</html>
