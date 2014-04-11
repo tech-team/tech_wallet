@@ -22,23 +22,56 @@
             </ul>
         </div>
     </div>
-    <ul class="media table-bordered">
-	    <li class="media-wrapper">
-		    <a class="pull-left" style="margin: 5px 0 0 5px" href="#">
-		        <img class="media-object" src="../img/wmr_32.png" alt="wm">
-		    </a>
-		    <div class="wallet-info media-body">
-		        <div class="row-fluid">
-			        <h2 class="pull-left media-heading">Веб-мани</h2>
-			        <a href="#rename" data-toggle="modal"><button role="button" class="btn-small" style="margin: 5px 0 0 5px"> <i class="icon-pencil"></i></button></a>
-			        <span class="balance table-bordered">1 000 Р</span>
-		     	</div>
-                <h3> Web Money</h3>
+    <div id='content' class='row-fluid'>
+        <div class='span12 main'>
+            <h2>Информация о кошельке</h2>
+            <div class="thumbnail alert alert-block alert-info">
+                <table class="table">
+                    <tr>
+                        <td>
+                            Название:
+                        </td>
+                        <td>
+                            <input type="text" value="Веб-мани">
+                            <button>Сохранить</button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            Тип:
+                        </td>
+                        <td>
+                            Web Money
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            Счёт:
+                        </td>
+                        <td>
+                            R0010100101010010
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            Сумма:
+                        </td>
+                        <td>
+                            1 000 Р
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            Создан:
+                        </td>
+                        <td>
+                            11.04.2014
+                        </td>
+                    </tr>
+                </table>
 
-		        <h4> R0010100101010010 </h4>
-		    </div>
-		</li>
-	</ul>
+                <a href="#" id="delete-wallet"><div class="btn btn-error">Удалить</div></a>
+            </div>
 </div>
 </body>
 </html>
