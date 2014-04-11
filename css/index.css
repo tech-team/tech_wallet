@@ -45,3 +45,8 @@ ul {
 .renameModal {
 	z-index: 100000;
 }
+
+
+.confirmButton {
+	display: none;
+}

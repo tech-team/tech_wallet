@@ -46,4 +46,21 @@ $(document).ready(function() {
         window.location.href = "wallet-info.html";
         return false;
     }) ;
+
+    $(".editButton").click(function() {
+        $(this).hide();
+        $('.confirmButton').show();
+        var $name = $('#walletName');
+        var text = $name.text();
+        $name.html('<input type="text" value="' + text + '">');
+    });
+
+    $(".confirmButton").click(function() {
+        var $name = $('#walletName');
+        var text = $name.find('input').prop('value');
+        $name.find('input').remove();
+        $name.text(text);
+        $(this).hide();
+        $('.editButton').show();
+    });
 });
