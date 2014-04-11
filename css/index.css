@@ -20,6 +20,10 @@ ul {
 	cursor: pointer;
 }
 
+.table tr:first-child td {
+	border-top-width:  0;
+}
+
 .media-wrapper:hover {
 	background-color: #DDD;
 }
