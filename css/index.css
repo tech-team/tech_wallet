@@ -7,6 +7,26 @@ td:nth-child(1)
     font-weight: bold;
 }
 
+ul {
+	list-style-type: none;
+}
+
+.media-wrapper {
+	margin: 5px 5px 0 5px;
+}
+
 .media-body {
 	cursor: pointer;
 }
+
+.media:hover {
+	background-color: #DDD;
+}
+
+.balance {
+	float: right;
+	display: inline;
+
+	background-color: #9F9;
+}
+
