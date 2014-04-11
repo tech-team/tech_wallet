@@ -33,10 +33,20 @@ $(document).ready(function() {
 	}) ;
 	$(".recipient").change(function() {
     	var obj = $(this).find("option:selected").text();
+    	var result_txt = $(".recipient-result");
     	var result = $(document).find(".recipient-result");
 
     	if (obj !== "Другой (ввести)") {
     		result.attr("disabled", "disabled");
+    		if (obj === "Web Money (R0010100101010010) 1000 Р") {
+    			result.attr("value", "R0010100101010010");
+    		}
+    		if (obj === "Visa Electron (Зарплатная) (7623545235426354) 28 000 Р") {
+    			result.attr("value", "7623545235426354");
+    		}
+    		if (obj === "Visa Electron (Общак) (3745653645364556) 30 000 Р") {
+    			result.attr("value", "3745653645364556");
+    		}
     	}
     	else {
     		result.attr("disabled", false);
