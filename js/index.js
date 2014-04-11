@@ -9,15 +9,8 @@ $(document).ready(function() {
         return false;
     }) ;
 
-    $(".add-btn").click(function() {
-        window.location.href = "wallet-add.html";
+    $(".button-back").click(function() {
+        window.history.back();
         return false;
     }) ;
-
-    $(".added").click(function() {
-        window.location.href = "wallet-info.html";
-        return false;
-    }) ;
-
-
 });
