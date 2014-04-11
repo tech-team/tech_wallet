@@ -58,3 +58,7 @@ ul {
 	background-color: #EED;
 	padding: 5px 25px;
 }
+
+.control-label{
+    font-weight: bold;
+}
