@@ -10,3 +10,7 @@ td:nth-child(1)
 .media-body {
 	cursor: pointer;
 }
+
+.table tr:first-child td {
+	border-top-width: 0;
+}
