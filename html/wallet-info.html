@@ -6,6 +6,7 @@
     <link href="http://netdna.bootstrapcdn.com/twitter-bootstrap/2.3.0/css/bootstrap-combined.min.css" rel="stylesheet">
     <script src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
     <script src="../js/index.js"></script>
+    <script src="../js/bootstrap.min.js"></script>
 </head>
 <body>
 <div class="container">
@@ -23,13 +24,16 @@
     </div>
     <ul class="media table-bordered">
 	    <li class="media-wrapper">
-		    <a class="pull-left" href="#">
+		    <a class="pull-left" style="margin: 5px 0 0 5px" href="#">
 		        <img class="media-object" src="../img/wmr_32.png" alt="wm">
 		    </a>
 		    <div class="wallet-info media-body">
-		        <h3 class="media-heading">Web Money
-		        	<span class="balance table-bordered" font-size=20px>1 000 Р</span>
-		        </h3>
+		        <div class="row-fluid">
+			        <h2 class="pull-left media-heading">Веб-мани</h2>
+			        <a href="#rename" data-toggle="modal"><button role="button" class="btn-small" style="margin: 5px 0 0 5px"> <i class="icon-pencil"></i></button></a>
+			        <span class="balance table-bordered">1 000 Р</span>
+		     	</div>
+                <h3> Web Money</h3>
 
 		        <h4> R0010100101010010 </h4>
 		    </div>
