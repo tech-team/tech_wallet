@@ -42,6 +42,10 @@ ul {
 	background-color: #9F9;
 }
 
+.renameModal, .confirmButton {
+	margin-left: 100px;
+}
+
 .renameModal {
 	z-index: 100000;
 }
