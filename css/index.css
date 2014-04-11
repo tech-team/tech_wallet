@@ -53,3 +53,8 @@ ul {
 .confirmButton {
 	display: none;
 }
+
+.thumbnail {
+	background-color: #EED;
+	padding: 5px 25px;
+}
