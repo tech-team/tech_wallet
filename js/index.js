@@ -90,5 +90,12 @@ $(document).ready(function() {
             window.location.href = "index.html";
 
         return false;
-    })
+    });
+
+    $('#menu-button').click(function() {
+        var menu = $('#menu');
+        menu.hide();
+        menu.removeClass("hidden-phone");
+        menu.show(100);
+    });
 });
