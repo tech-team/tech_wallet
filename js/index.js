@@ -8,4 +8,9 @@ $(document).ready(function() {
         window.location.href = "status.html";
         return false;
     }) ;
+
+    $(".button-back").click(function() {
+        window.history.back();
+        return false;
+    }) ;
 });
