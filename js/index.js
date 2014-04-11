@@ -15,9 +15,9 @@ $(document).ready(function() {
     }) ;
 
     $(".payment-type").change(function() {
-    	obj = $(this).find("option:selected").text();
-    	result = $(".payment-type-result");
-    	result_placeholder = $(document).find(".payment-placeholder");
+    	var obj = $(this).find("option:selected").text();
+    	var result = $(".payment-type-result");
+    	var result_placeholder = $(document).find(".payment-placeholder");
     	if (obj === "ЖКХ") {
     		result.text("Номер счета:");
     		result_placeholder.attr("placeholder", "R?????");
@@ -29,6 +29,17 @@ $(document).ready(function() {
     	else if (obj === "Steam") {
     		result.text("Steam аккаунт:");
     		result_placeholder.attr("placeholder", "techteam");
+    	}
+	}) ;
+	$(".recipient").change(function() {
+    	var obj = $(this).find("option:selected").text();
+    	var result = $(document).find(".recipient-result");
+
+    	if (obj !== "Другой (ввести)") {
+    		result.attr("disabled", "disabled");
+    	}
+    	else {
+    		result.attr("disabled", false);
     	}
 	}) ;
 
