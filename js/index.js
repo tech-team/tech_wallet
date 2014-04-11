@@ -43,7 +43,14 @@ $(document).ready(function() {
     }) ;
 
     $(".button-add-confirm").click(function() {
-        window.location.href = "wallet-info.html";
+        window.location.href = "index.html";
         return false;
     }) ;
+
+    $('#delete-wallet').click(function() {
+        if (confirm("Вы действительно хотите удалить этот счёт из кошелька?"))
+            window.location.href = "index.html";
+
+        return false;
+    })
 });
