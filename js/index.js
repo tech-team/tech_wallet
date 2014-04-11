@@ -8,4 +8,27 @@ $(document).ready(function() {
         window.location.href = "status.html";
         return false;
     }) ;
+
+    $(".wallet-info").click(function() {
+    	window.location.href = "wallet-info.html";
+        return false;
+    }) ;
+
+    $(".payment-type").change(function() {
+    	obj = $(this).find("option:selected").text();
+    	result = $(".payment-type-result");
+    	result_placeholder = $(document).find(".payment-placeholder");
+    	if (obj === "ЖКХ") {
+    		result.text("Номер счета:");
+    		result_placeholder.attr("placeholder", "R?????");
+    	}
+    	else if (obj === "Мобильный") {
+    		result.text("Номер телефона:");
+    		result_placeholder.attr("placeholder", "+7(???)???-??-??");
+    	}
+    	else if (obj === "Steam") {
+    		result.text("Steam аккаунт:");
+    		result_placeholder.attr("placeholder", "techteam");
+    	}
+    }) ;
 });

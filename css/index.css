@@ -6,3 +6,7 @@ td:nth-child(1)
 {
     font-weight: bold;
 }
+
+.media-body {
+	cursor: pointer;
+}
