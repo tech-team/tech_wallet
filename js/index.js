@@ -30,5 +30,10 @@ $(document).ready(function() {
     		result.text("Steam аккаунт:");
     		result_placeholder.attr("placeholder", "techteam");
     	}
+	}) ;
+
+    $(".button-back").click(function() {
+        window.history.back();
+        return false;
     }) ;
 });
