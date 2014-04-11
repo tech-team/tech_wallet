@@ -7,10 +7,41 @@ td:nth-child(1)
     font-weight: bold;
 }
 
+ul {
+	list-style-type: none;
+}
+
+.media-wrapper {
+	background-color: #D0D0D0;
+	margin: 5px 5px 0 5px;
+}
+
 .media-body {
 	cursor: pointer;
 }
 
 .table tr:first-child td {
 	border-top-width:  0;
+}
+
+.media-wrapper:hover {
+	background-color: #DDD;
+}
+
+.media-heading {
+	text-decoration: underline;
+}
+
+.balance {
+	float: right;
+	display: inline;
+	margin: 5px 5px 0 0;
+
+	font-weight: bold;
+	font-size: 20px;
+	background-color: #9F9;
+}
+
+.renameModal {
+	z-index: 100000;
 }
