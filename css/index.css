@@ -12,5 +12,5 @@ td:nth-child(1)
 }
 
 .table tr:first-child td {
-	border-top-width: 0;
+	border-top-width:  0;
 }
