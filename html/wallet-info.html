@@ -12,10 +12,17 @@
 </head>
 <body>
 <div class="container">
-    <div class='navbar navbar-inverse'>
-        <div class='navbar-inner nav-collapse' style="height: auto;">
+    <div class='navbar navbar-inverse visible-phone'>
+        <div class='navbar-inner nav-collapse'>
+            <ul class="nav" id="menu-button">
+                <li><a href="#">Меню<div class="pull-right menu-button"></div></a></li>
+            </ul>
+        </div>
+    </div>
+    <div class='navbar navbar-inverse hidden-phone' id="menu">
+        <div class='navbar-inner nav-collapse'>
             <ul class="nav">
-                <li><a href="index.html">Счета</a></li>
+                <li class="active"><a href="index.html">Счета</a></li>
                 <li><a href="status.html">История</a></li>
                 <li><a href="oplata.html">Оплата</a></li>
                 <li><a href="perevod.html">Перевод</a></li>
@@ -24,6 +31,7 @@
             </ul>
         </div>
     </div>
+
     <div id='content' class='row-fluid'>
         <div class='span12 main'>
             <h2>Информация о кошельке</h2>

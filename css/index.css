@@ -54,7 +54,7 @@ ul {
 	display: none;
 }
 
-.thumbnail {
+.thumbnail:not(.alert) {
 	background-color: #EED;
 	padding: 5px 25px;
 }
@@ -70,4 +70,8 @@ ul {
     width: 20px;
     height: 20px;
     margin-right: -20px;
+}
+
+.navbar-inner {
+    height: auto;
 }
