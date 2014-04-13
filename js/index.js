@@ -101,9 +101,11 @@ $(document).ready(function() {
 
     $('#menu-button').click(function() {
         var menu = $('#menu');
-        menu.hide();
-        menu.removeClass("hidden-phone");
-        menu.show(100);
+        if (menu.hasClass("hidden-phone")) {
+            menu.hide();
+            menu.removeClass("hidden-phone");
+        }
+        menu.toggle(100);
     });
 
 
