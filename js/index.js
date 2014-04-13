@@ -1,3 +1,10 @@
+jQuery.fn.outerHTML = function(s) {
+    return s
+        ? this.before(s).remove()
+        : jQuery("<p>").append(this.eq(0).clone()).html();
+};
+
+
 $(document).ready(function() {
    $(".btn-primary").click(function() {
         window.location.href = "podtverzhdenie.html";
@@ -10,8 +17,8 @@ $(document).ready(function() {
     }) ;
 
     $(".wallet-info").click(function() {
-    	window.location.href = "wallet-info.html";
-        return false;
+    	//window.location.href = "wallet-info.html";
+        //return false;
     }) ;
 
     $(".payment-type").change(function() {
@@ -97,5 +104,55 @@ $(document).ready(function() {
         menu.hide();
         menu.removeClass("hidden-phone");
         menu.show(100);
+    });
+
+
+
+
+
+
+    $('.slider__down-button').click(function() {
+        var $list = $('.item-wrapper');
+        $list.each(function(i) {
+            $(this).children().unwrap();
+        });
+        $('.slider__list__list-item').slideDown();
+    });
+
+    $('.slider__list__list-item').click(function() {
+        var id = $(this).data('id');
+        var $this = $(this);
+        var $list = $this.parent('.slider__list');
+        var classList = $list.attr('class') + ' item-wrapper';
+        var ul = $('<ul></ul>');
+        ul.attr('class', classList);
+        var ulHtml = ul.outerHTML();
+
+        var beforeElems = $this.prevAll();
+        var before = beforeElems.wrapAll(ulHtml).parent();
+
+        var afterElems = $this.nextAll();
+        var after = afterElems.wrapAll(ulHtml).parent();
+
+        before.slideUp();
+        after.slideUp();
+
+
+        // $(before).each(function(index) {
+        //     var li = $(this);
+            
+        //     setTimeout(function() {
+        //         li.slideUp(2000);
+        //     }, 2000 * index);
+        // });
+
+        // $(after).each(function(index) {
+        //     var li = $(this);
+            
+        //     setTimeout(function() {
+        //         li.slideUp(2000);
+        //     }, 2000 * index);
+        // });
+
     });
 });
