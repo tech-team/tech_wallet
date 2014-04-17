@@ -2,17 +2,17 @@
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
     <title>Tech Wallet</title>
-    <link href="http://netdna.bootstrapcdn.com/twitter-bootstrap/2.3.0/css/bootstrap-combined.min.css" rel="stylesheet">
+    <link href="../css/bootstrap.css" rel="stylesheet">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="http://twitter.github.com/bootstrap/assets/css/bootstrap.css" rel="stylesheet">
+    <link href="../css/bootstrap-responsive.css" rel="stylesheet">
     <link rel='stylesheet' href="../css/index.css" />
-    <script src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
+    <script src="../js/jquery.js"></script>
     <script src="../js/index.js"></script>
 </head>
 <body>
     <div class="container">
         <div class='navbar navbar-inverse'>
-            <div class='navbar-inner'>
+            <div class='navbar-inner nav-collapse'>
                 <ul class="nav">
                     <li><a href="#">TechWallet</a></li>
                 </ul>
@@ -24,17 +24,15 @@
                 <form class="form-horizontal">
                     <h2>Вход</h2>
                     <div class="control-group">
-                        <label class="control-label">Логин:</label>
+                        <label class="control-label" for="login">Логин:</label>
                         <div class="controls">
-                            <input type="text" />
+                            <input type="text" id="login"/>
                         </div>
                     </div>
                     <div class="control-group">
-                        <label class="control-label">Пароль:</label>
+                        <label class="control-label" for="password">Пароль:</label>
                         <div class="controls">
-                            <div class="input-append">
-                                <input type="password" />
-                            </div>
+                            <input type="password" id="password" />
                         </div>
                     </div>
 

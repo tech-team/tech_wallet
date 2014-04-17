@@ -105,6 +105,7 @@ $(document).ready(function() {
         if (menu.hasClass("hidden-phone")) {
             menu.hide();
             menu.removeClass("hidden-phone");
+            menu.children(0).addClass("nav-collapse");
         }
         menu.toggle(100);
     });
