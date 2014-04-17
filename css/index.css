@@ -72,6 +72,13 @@ ul {
     margin-right: -20px;
 }
 
+#recipient-wallet {
+    display: none;
+}
+
+.future {
+    display: none;
+}
 
 
 

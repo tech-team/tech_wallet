@@ -6,6 +6,18 @@ jQuery.fn.outerHTML = function(s) {
 
 
 $(document).ready(function() {
+    setTimeout(function() {
+        var $past = $('.past');
+        var $future = $('.future');
+
+        $past.animate({opacity: 0}, 1000, "swing", function() {
+            $past.hide();
+            $future.css("opacity", 0);
+            $future.show();
+            $future.animate({opacity: 100}, 1000);
+        });
+    }, 2500);
+
    $(".btn-primary").click(function() {
         window.location.href = "podtverzhdenie.html";
         return false;
@@ -17,8 +29,8 @@ $(document).ready(function() {
     }) ;
 
     $(".wallet-info").click(function() {
-    	//window.location.href = "wallet-info.html";
-        //return false;
+    	window.location.href = "wallet-info.html";
+        return false;
     }) ;
 
     $(".payment-type").change(function() {
@@ -27,37 +39,26 @@ $(document).ready(function() {
     	var result_placeholder = $(document).find(".payment-placeholder");
     	if (obj === "ЖКХ") {
     		result.text("Номер счета:");
-    		result_placeholder.attr("placeholder", "R?????");
+    		result_placeholder.attr("placeholder", "R10100101001010");
     	}
     	else if (obj === "Мобильный") {
     		result.text("Номер телефона:");
-    		result_placeholder.attr("placeholder", "+7(???)???-??-??");
+    		result_placeholder.attr("placeholder", "+7(909)322-23-32");
     	}
     	else if (obj === "Steam") {
     		result.text("Steam аккаунт:");
     		result_placeholder.attr("placeholder", "techteam");
     	}
-	}) ;
-	$(".recipient").change(function() {
-    	var obj = $(this).find("option:selected").text();
-    	var result_txt = $(".recipient-result");
-    	var result = $(document).find(".recipient-result");
+	});
 
-    	if (obj !== "Другой (ввести)") {
-    		result.attr("disabled", "disabled");
-    		if (obj === "Web Money (R0010100101010010) 1000 Р") {
-    			result.attr("value", "R0010100101010010");
-    		}
-    		if (obj === "Visa Electron (Зарплатная) (7623545235426354) 28 000 Р") {
-    			result.attr("value", "7623545235426354");
-    		}
-    		if (obj === "Visa Electron (Общак) (3745653645364556) 30 000 Р") {
-    			result.attr("value", "3745653645364556");
-    		}
-    	}
-    	else {
-    		result.attr("disabled", false);
-    	}
+	$(".recipient").change(function() {
+    	var obj = $(".recipient").val();
+    	var result = $("#recipient-wallet");
+
+    	if (obj === "Другой...")
+    		result.show();
+    	else
+    		result.hide();
 	}) ;
 
     $(".button-back").click(function() {
@@ -71,7 +72,7 @@ $(document).ready(function() {
     }) ;
 
     $(".button-add-confirm").click(function() {
-        window.location.href = "index.html";
+        window.location.href = "wallets.html";
         return false;
     }) ;
 
@@ -94,7 +95,7 @@ $(document).ready(function() {
 
     $('#delete-wallet').click(function() {
         if (confirm("Вы действительно хотите удалить этот счёт из кошелька?"))
-            window.location.href = "index.html";
+            window.location.href = "wallets.html";
 
         return false;
     });

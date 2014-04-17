@@ -12,17 +12,17 @@
 <body>
     <div class="container">
         <div class='navbar navbar-inverse visible-phone'>
-            <div class='navbar-inner nav-collapse'>
+            <div class='navbar-inner'>
                 <ul class="nav" id="menu-button">
                     <li><a href="#">Меню<div class="pull-right menu-button"></div></a></li>
                 </ul>
             </div>
         </div>
         <div class='navbar navbar-inverse hidden-phone' id="menu">
-            <div class='navbar-inner nav-collapse'>
+            <div class='navbar-inner'>
                 <ul class="nav">
-                    <li class="active"><a href="index.html">Счета</a></li>
-                    <li><a href="status.html">История</a></li>
+                    <li><a href="wallets.html">Счета</a></li>
+                    <li class="active"><a href="status.html">История</a></li>
                     <li><a href="oplata.html">Оплата</a></li>
                     <li><a href="perevod.html">Перевод</a></li>
                     <li><a href="popolnenie.html">Пополнение</a></li>
@@ -34,7 +34,7 @@
         <div id='content' class='row-fluid'>
             <div class='span12 main'>
                 <h2>Проведённые операции</h2>
-                <div class="thumbnail alert alert-block alert-info">
+                <div class="thumbnail alert alert-block alert-info past">
                     <table class="table">
                         <tr>
                             <td>
@@ -84,9 +84,60 @@
                                 В обработке
                             </td>
                         </tr>
-                        
-                        
                     </table>
+                </div>
+                <div class="thumbnail alert alert-block alert-success future">
+                    <table class="table">
+                        <tr>
+                            <td>
+                                Вид операции:
+                            </td>
+                            <td>
+                                Перевод
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                Со счёта:
+                            </td>
+                            <td>
+                                Web Money (R0010100101010010)
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                На счёт:
+                            </td>
+                            <td>
+                                Visa Electron (Общак) (3745653645364556)
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                Сумма:
+                            </td>
+                            <td>
+                                1 000 Р
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                Дата:
+                            </td>
+                            <td>
+                                11.04.2014
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                Статус:
+                            </td>
+                            <td>
+                                Выполнено
+                            </td>
+                        </tr>
+                    </table>
+                    <a href="perevod.html"><div class="btn btn-info">Повторить платёж</div></a>
                 </div>
                 <div class="thumbnail alert alert-block alert-success">
                     <table class="table">
